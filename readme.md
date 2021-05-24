@@ -18,7 +18,20 @@ Laravel package to provide swoole redis pool integration,laravel redis pool cach
     ];
 ```
 
+## install
+`composer require falcolee/laravel-swoole-redis`
+
 ## how to use
-make true you've got a right swoole environment  
-change your redis drive or session drive to `redis_pool` in your `.env` file , that is it
+ * step 1: make true you've got a right swoole environment  
+ * step 2:
+add
+```
+    'redis_pool' => [
+        'driver' => 'redis',
+        'connection' => 'default',
+    ],
+```
+in your config/cache.php `stores` section below `redis` array
+
+* step 3: change your redis drive or session drive to `redis_pool` in your `.env` file , that is it
 
